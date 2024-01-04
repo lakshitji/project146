@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Robot body -->
+      <a-box color="gray" position="0 1.25 -3" scale="1 1 1"></a-box>
+
+      <!-- Robot head -->
+      <a-sphere color="blue" position="0 2 -3" radius="0.5"
+      animation = "property:position; dir:alternate ;from:0 2 -3; to:0 2.2 -3;loop:true;dur:1000 ">
+        <!-- Robot eyes -->
+        <a-sphere color="white" radius="0.1" position="-0.15 0.1 0.4"></a-sphere>
+        <a-sphere color="white" radius="0.1" position="0.15 0.1 0.4"></a-sphere>
+      </a-sphere>
+
+      <!-- Robot antennas -->
+      <a-cylinder color="gold" position="0 2.3 -3" radius="0.03" height="0.5"></a-cylinder>
+      <a-cylinder color="gold" position="0 2.3 -3" radius="0.03" height="0.5" rotation="0 0 45"></a-cylinder>
+
+      <!-- Right arm -->
+      <a-entity>
+        <a-box position="-0.7 1 -3" color="green" scale="0.3 1 0.3"
+        animation = "property:position; dir:alternate ;from:0.7 1 -3; to:0.7 1.3 -3;loop:true;dur:1000 "></a-box>
+      </a-entity>
+      <!-- Left arm-->
+      <a-entity>
+        <a-box position="0.7 1 -3" color="green" scale="0.3 1 0.3"
+        animation = "property:position; dir:alternate ;from:-0.7 1 -3; to:-0.7 1.3 -3;loop:true;dur:1000 "></a-box>
+      </a-entity>
+      <!--Left leg-->
+      <a-entity>
+         <a-box position="0.25 0.2 -3" color="red" scale="0.3 1 0.3"></a-box>
+       </a-entity>
+
+      <!--Right leg-->
+      <a-entity>
+         <a-box position="-0.25 0.2 -3" color="red" scale="0.3 1 0.3"></a-box>
+       </a-entity>
+
+  </body>
+</html>
